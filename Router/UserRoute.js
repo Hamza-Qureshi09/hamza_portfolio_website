@@ -5,6 +5,9 @@ const UserMessage=require("../src/model/schem");
 router.get("/",(req,res)=>{
     res.render("index")
 })
+router.get("/index",(req,res)=>{
+    res.render("index")
+})
 
 
 // contact page post method
@@ -19,7 +22,7 @@ router.post("/postmessage",async(req,res)=>{
         });
         const result=await newUser.save();
         console.log("Message Send! 😃 Thank You")
-        res.render("index")
+        res.redirect("index")
     }catch(error){
         console.log("error occured during send message"+error);
         console.log("Cannot send Message")
