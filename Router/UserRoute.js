@@ -22,7 +22,7 @@ router.post("/postmessage",async(req,res)=>{
         });
         const result=await newUser.save();
         console.log("Message Send! 😃 Thank You")
-        res.redirect("index")
+        res.redirect("index");
     }catch(error){
         console.log("error occured during send message"+error);
         console.log("Cannot send Message")

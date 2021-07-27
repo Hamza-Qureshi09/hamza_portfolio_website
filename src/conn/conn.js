@@ -1,5 +1,5 @@
 const mongoose=require("mongoose");
-mongoose.connect(process.env.DB_CONN,{
+mongoose.connect("mongodb+srv://hamza29061999:hamza29061999@cluster0.rtwit.mongodb.net/Hz_Portfolio?retryWrites=true&w=majority",{
     useCreateIndex:false,
     useFindAndModify:true,
     useNewUrlParser:true,
@@ -8,4 +8,4 @@ mongoose.connect(process.env.DB_CONN,{
     console.log("Connection to Db is Successful!")
 }).catch((err)=>{
     console.log(`connection error 👉 ${err}`)
-})
+}) 
